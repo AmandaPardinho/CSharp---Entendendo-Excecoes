@@ -1,7 +1,32 @@
 ﻿using bytebank.Titular;
 using bytebank.Contas;
 using bytebank;
+using System.Numerics;
 
+using (LeitorDeArquivos leitor = new LeitorDeArquivos("contas.txt"))
+{
+    leitor.LerProximaLinha();
+    leitor.LerProximaLinha();
+    leitor.LerProximaLinha();
+}
+
+/*LeitorDeArquivos leitor = new LeitorDeArquivos("contas.txt");
+//try
+//{
+//    leitor.LerProximaLinha();
+//    leitor.LerProximaLinha();
+//}
+//catch (IOException)
+//{
+//    Console.WriteLine("Leitura de arquivo interrompida.");
+//    Console.WriteLine("Exceção do tipo IOException capturada e tratada");
+//}
+//finally
+//{
+//    leitor.Fechar();
+}*/
+
+/*
 try
 {
     ContaCorrente conta1 = new ContaCorrente(4564, "1234-X");
@@ -36,4 +61,5 @@ catch(OperacaoFinanceiraException e)
     Console.WriteLine(e.InnerException.Message);
     Console.WriteLine(e.InnerException.StackTrace);
 }
+*/
 Console.ReadKey();
